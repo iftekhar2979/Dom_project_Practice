@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video play and pause</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+      <video controls muted autoplay loop class="video-container">
+        <source src="./Countdown - 2637.mp4" type="video/mp4" />
+      </video>
+      <h1>video project</h1>
+      <!-- video switch -->
+      <button class="switch-btn">
+        <span>
+          play
+        </span>
+        <span>
+          pause
+        </span>
+        <span class="switch"></span>
+      </button>
+    </header>
+
+    <script>
+      const btn=document.querySelector('.switch-btn')
+      const video=document.querySelector('video')
+      btn.addEventListener('click',()=>{
+        if(!btn.classList.contains("slide")){
+          btn.classList.add("slide");
+          video.pause()
+        }else{
+          btn.classList.remove("slide")
+          video.play()
+        }
+      })
+    </script>
+</body>
+</html>
