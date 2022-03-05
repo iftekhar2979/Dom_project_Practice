@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side bar</title>
+    <style>
+        * {
+            margin: 0 auto;
+        }
+
+        .nav {
+            background-color: violet;
+            width: 100vw;
+            height: 10vh;
+        }
+
+        i.fa.fa-bars {
+            color: white;
+            font-size: 25px;
+            padding: 5px;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        li {
+            list-style: none;
+
+        }
+
+        .show-sidebar {
+            display: flex;
+            background: lightblue;
+            flex-direction: column;
+            height: 100%;
+            width: 10%;
+            position: fixed;
+        }
+
+        .show-sidebar li {
+            padding: 10px;
+
+        }
+
+        .close-sidebar li {
+            padding: 10px;
+        }
+
+        .close-sidebar {
+
+            width: 0px;
+
+        }
+
+        li.link {
+            padding: 10px;
+            color: gray;
+            font-size: 20px;
+        }
+
+        div {
+            display: inline-block;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="nav">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <div>
+        <ul class="" id="sidebar">
+            <li class="link">Home</li>
+            <li class="link">About</li>
+            <li class="link">Services</li>
+            <li class="link">Contact Us</li>
+        </ul>
+    </div>
+    <script>
+        const menu = document.querySelector('.fa-bars');
+        const sidebar = document.getElementById('sidebar')
+        menu.addEventListener('click', function () {
+            sidebar.classList.toggle('show-sidebar')
+            sidebar.classList.toggle('close-sidebar')
+        })
+    </script>
+</body>
+
+</html>

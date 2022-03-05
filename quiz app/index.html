@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Quiz application</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style>
+label{
+  display: block;
+}
+.bg{
+  background-color: rgb(119, 110, 110);
+  color: white;
+  font-size: 20px;
+  padding: 5px;
+}
+.bg:hover{
+  background-color: rgb(125, 90, 100);
+}
+  .bg-question {
+    background-color: #aab3cd;
+    color: #405583;
+    text-shadow: 5px 3px 4px grey;
+    padding: 10px;
+}
+
+  </style>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="container">
+    <h4 class="bg-question">Q1. what is html ?</h4>
+    <p class="bg"><label><input type="radio" name="q1" id="" value="OOL Language"> OOL Language</label></p>
+   <p class="bg"> <label><input type="radio" name="q1" id="Q1" value="Markup Language">Markup Language</label></p>
+    <p class="bg"><label><input type="radio" name="q1" id="" checked value="Programing Language"> Programing Language</label></p>
+    <p class="bg"><label><input type="radio" name="q1" id="" value="Nothing"> Nothing</label></p>
+
+    <h4 class="bg-question">Q2. what is JavaScript?</h4>
+    <p class="bg"><label><input type="radio" name="q2" id="" value="OOL Language"> OOL Language</label></p>
+   <p class="bg"> <label><input type="radio" name="q2" id="" value="Markup Language">Markup Language</label></p>
+    <p class="bg"><label><input type="radio" name="q2" id="Q2" checked value="Programing Language"> Programing Language</label></p>
+    <p class="bg"><label><input type="radio" name="q2" id="" value="Nothing"> Nothing</label></p>
+
+<h4 class="bg-question">Q3. what is bootstrap?</h4>
+    <p class="bg"><label><input type="radio" name="q3" id="" value="OOL Language"> OOL Language</label></p>
+   <p class="bg"> <label><input type="radio" name="q3" id="" value="Markup Language">Markup Language</label></p>
+    <p class="bg"><label><input type="radio" name="q3" id="" checked value="Programing Language"> Programing Language</label></p>
+    <p class="bg"><label><input type="radio" name="q3" id="Q3" value="Nothing"> an html css framework</label></p>
+    
+
+    <button class="btn btn-primary">Submit</button>
+  </div>
+ 
+  <!-- Optional JavaScript -->
+  <script>
+    const submit=document.querySelector('.btn.btn-primary')
+// selecting the answer with id 
+submit.addEventListener('click',()=>{
+const ans1=document.getElementById('Q1').checked
+const ans2=document.getElementById('Q2').checked
+const ans3=document.getElementById('Q3').checked
+
+var count=0;
+if(ans1){
+  count++
+}
+if(ans2){
+  count++
+}if(ans3){
+  count++
+}
+function passOrFail(){
+if(count===3){
+  const pass='passed'
+  return pass
+
+}else{
+  const fail='failed'
+  return fail
+}
+}
+document.querySelector('.container').innerHTML=`
+<div>
+    <div class="h4 bg-question text-center">You are ${passOrFail()} Your Mark is ${count} </div>
+  </div>
+
+`
+})
+  </script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

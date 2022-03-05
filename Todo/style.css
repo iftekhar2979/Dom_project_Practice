@@ -1,0 +1,33 @@
+i{
+    cursor: pointer;
+}
+.red{
+    color: red;
+    margin: 5px;
+    padding: 3px;
+}
+.red:hover{
+    background-color: red;
+    color: white;
+    /* padding: 3px; */
+}
+.green{
+    color: greenyellow;
+    margin: 5px;
+    padding: 3px;
+}
+.green:hover{
+    background-color: greenyellow;
+    color: white;
+    /* padding: 3px; */
+}
+.blue{
+    color: lightseagreen;
+    margin: 5px;
+    padding: 3px;
+}
+.blue:hover{
+    background-color: lightseagreen;
+    color: white;
+    /* padding: 3px; */
+}
